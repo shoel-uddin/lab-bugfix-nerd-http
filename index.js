@@ -1,24 +1,10 @@
 const http = require('http');
-const nerds = require('nerds');
+const hp = require('hp');
 const HOST = '0.0.0.0';
 const PORT = 9999;
 
-const server = http.createServer((req, res) => {
-    const {
-        first,
-        last,
-        house,
-        wand
-    } = nerds.resolve('Harry Potter').asArray()[0];
-    res.end(`
-<h1>${first} ${last}</h1>
-<h2>${house}</h2>
-<ul>
-  <li>${wand}</li>
-</ul>
-`);
-});
+const server = http.createServer(hp);
 
-server.listen(PORT, HOST, () => {
+server.listen(PORT, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
