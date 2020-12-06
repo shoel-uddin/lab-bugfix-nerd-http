@@ -1,4 +1,4 @@
-# Random Harry Potter
+bug # Random Harry Potter
 
 When you `npm run dev` and go to `http://localhost:9999`, you should see a random Harry Potter character's info. For example:
 
@@ -11,7 +11,8 @@ Slytherin
 
 # Bugs
 
-- [ ] The `dev` script no longer works
+- [x] The `dev` script no longer works
+        -in the file package.json 'dev' was misspelled as 'dve'
 - [ ] App crashes on browser refresh with `Error [ERR_STREAM_WRITE_AFTER_END]: write after end`
 - [ ] After moving the `http.createServer()` callback to another file, couldn't get server to run
 
